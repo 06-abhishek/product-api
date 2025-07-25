@@ -80,7 +80,9 @@ docker compose down -v --remove-orphans
 
 | Method | Endpoint                   | Description              |
 | ------ | -------------------------- | ------------------------ |
-| GET    | `/products?category=Shoes` | Get products by category |
+| GET    | `/products`                | Get all products         |
+| GET    | `/products?category=Books` | Get products by category |
+| GET    | `/products/:id`            | Get products by id       |
 | POST   | `/products`                | Create a new product     |
 
 ---
