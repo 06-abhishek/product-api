@@ -9,9 +9,13 @@ const app = express();
 
 app.use(helmet());
 app.use(express.json());
-app.use(xss());
-app.use(mongoSanitize());
+// app.use(xss());
+// app.use(mongoSanitize());
 app.use(rateLimiter);
+
+app.get("/", (req, res) => {
+  res.send("Backend Developer Test");
+});
 
 app.use("/api/products", productRoutes);
 
