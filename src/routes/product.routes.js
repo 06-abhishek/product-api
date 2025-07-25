@@ -6,7 +6,7 @@ const { productValidation } = require("../validators/product.validator");
 
 router.post("/", validate(productValidation), ctrl.createProduct);
 router.get("/", ctrl.getAllProducts);
-router.get("/:id", ctrl.getProductById);
 router.get("/product_by_category", ctrl.getProductsByCategory);
+router.get("/:id", ctrl.getProductById);
 
 module.exports = router;
