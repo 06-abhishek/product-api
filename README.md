@@ -54,8 +54,9 @@ Create a `.env` file in the root directory:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://mongo:27017/product-db
-REDIS_URL=redis://redis:6379
+MONGO_URI=mongodb://mongo:27017/ecommerce
+REDIS_HOST=redis
+REDIS_PORT=6379
 ```
 
 ---
