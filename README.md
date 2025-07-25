@@ -78,12 +78,12 @@ docker compose down -v --remove-orphans
 
 ## 📦 API Endpoints
 
-| Method | Endpoint                   | Description              |
-| ------ | -------------------------- | ------------------------ |
-| GET    | `/products`                | Get all products         |
-| GET    | `/products?category=Books` | Get products by category |
-| GET    | `/products/:id`            | Get products by id       |
-| POST   | `/products`                | Create a new product     |
+| Method | Endpoint                                       | Description              |
+| ------ | ---------------------------------------------- | ------------------------ |
+| GET    | `/products`                                    | Get all products         |
+| GET    | `/products/product_by_category?category=Books` | Get products by category |
+| GET    | `/products/:id`                                | Get products by id       |
+| POST   | `/products`                                    | Create a new product     |
 
 ---
 
