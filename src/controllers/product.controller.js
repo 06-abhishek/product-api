@@ -135,6 +135,16 @@ exports.getProductsByCategory = async (req, res) => {
   try {
     const { category } = req.query;
 
+    if (!CATEGORY_ENUM.includes(category)) {
+      return sendResponse(
+        res,
+        400,
+        false,
+        null,
+        `Invalid category. Valid categories: ${CATEGORY_ENUM.join(", ")}`
+      );
+    }
+
     if (!category) {
       return res.status(400).json({ message: "Category is required in query" });
     }
@@ -146,6 +156,7 @@ exports.getProductsByCategory = async (req, res) => {
     }
 
     const products = await Product.find({ category });
+
     if (products.length === 0) {
       return res
         .status(404)
